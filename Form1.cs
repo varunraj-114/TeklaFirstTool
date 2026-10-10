@@ -26,5 +26,17 @@ namespace TeklaFirstTool
                 model.GetConnectionStatus()
                 + "\nModel path: " + model.GetInfo().ModelPath);
         }
+        private void btnCreateBeam_Click(object sender, EventArgs e)
+        {
+            Model model = new Model();
+            Beam beam = new Beam(
+                new Tekla.Structures.Geometry3d.Point(0, 0, 0),
+                new Tekla.Structures.Geometry3d.Point(6000, 0, 0));
+            beam.Profile.ProfileString = "W16X40";
+            beam.Material.MaterialString = "A992";
+            bool inserted = beam.Insert();
+            bool committed = model.CommitChanges();
+            MessageBox.Show("Inserted: " + inserted + "\nCommitted: " + committed);
+        }
     }
 }

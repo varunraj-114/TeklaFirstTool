@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnConnect = new System.Windows.Forms.Button();
+            this.btnCreateBeam = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -41,11 +42,22 @@
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
+            // btnCreateBeam
+            // 
+            this.btnCreateBeam.Location = new System.Drawing.Point(59, 94);
+            this.btnCreateBeam.Name = "btnCreateBeam";
+            this.btnCreateBeam.Size = new System.Drawing.Size(150, 35);
+            this.btnCreateBeam.TabIndex = 1;
+            this.btnCreateBeam.Text = "Create Beam";
+            this.btnCreateBeam.UseVisualStyleBackColor = true;
+            this.btnCreateBeam.Click += new System.EventHandler(this.btnCreateBeam_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCreateBeam);
             this.Controls.Add(this.btnConnect);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -56,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnConnect;
+        private System.Windows.Forms.Button btnCreateBeam;
     }
 }
 
