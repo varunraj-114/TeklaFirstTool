@@ -1,0 +1,5 @@
+Tekla Structures 2026 (Student), US environment.
+C# Windows Forms, .NET Framework 4.8, x64.
+Profiles like W16X40, material A992.
+Give me ONE small change only, inside its own function.
+Do not change existing working code.
