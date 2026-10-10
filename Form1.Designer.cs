@@ -30,6 +30,7 @@
         {
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnCreateBeam = new System.Windows.Forms.Button();
+            this.btnCreateColumn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnConnect
@@ -52,11 +53,22 @@
             this.btnCreateBeam.UseVisualStyleBackColor = true;
             this.btnCreateBeam.Click += new System.EventHandler(this.btnCreateBeam_Click);
             // 
+            // btnCreateColumn
+            // 
+            this.btnCreateColumn.Location = new System.Drawing.Point(59, 153);
+            this.btnCreateColumn.Name = "btnCreateColumn";
+            this.btnCreateColumn.Size = new System.Drawing.Size(150, 35);
+            this.btnCreateColumn.TabIndex = 2;
+            this.btnCreateColumn.Text = "Create Column";
+            this.btnCreateColumn.UseVisualStyleBackColor = true;
+            this.btnCreateColumn.Click += new System.EventHandler(this.btnCreateColumn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnCreateColumn);
             this.Controls.Add(this.btnCreateBeam);
             this.Controls.Add(this.btnConnect);
             this.Name = "Form1";
@@ -69,6 +81,7 @@
 
         private System.Windows.Forms.Button btnConnect;
         private System.Windows.Forms.Button btnCreateBeam;
+        private System.Windows.Forms.Button btnCreateColumn;
     }
 }
 

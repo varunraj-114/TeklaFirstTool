@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Tekla.Structures.Model;
-
+using Point = Tekla.Structures.Geometry3d.Point;
 namespace TeklaFirstTool
 {
     public partial class Form1 : Form
@@ -37,6 +37,21 @@ namespace TeklaFirstTool
             bool inserted = beam.Insert();
             bool committed = model.CommitChanges();
             MessageBox.Show("Inserted: " + inserted + "\nCommitted: " + committed);
+        }
+        private void btnCreateColumn_Click(object sender, EventArgs e)
+        {
+            Model model = new Model();
+
+            Beam column = new Beam(new Point(0, 0, 0), new Point(0, 0, 4000));
+            column.Profile.ProfileString = "W12X26";
+            column.Material.MaterialString = "A992";
+            column.Position.Depth = Position.DepthEnum.MIDDLE;
+            column.Position.Plane = Position.PlaneEnum.MIDDLE;
+
+            bool inserted = column.Insert();
+            model.CommitChanges();
+
+            MessageBox.Show("Inserted: " + inserted);
         }
     }
 }
