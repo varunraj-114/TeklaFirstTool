@@ -43,7 +43,7 @@ namespace TeklaFirstTool
             Model model = new Model();
 
             Beam column = new Beam(new Point(0, 0, 0), new Point(0, 0, 4000));
-            column.Profile.ProfileString = "W12X26";
+            column.Profile.ProfileString = "W12X40";
             column.Material.MaterialString = "A992";
             column.Position.Depth = Position.DepthEnum.MIDDLE;
             column.Position.Plane = Position.PlaneEnum.MIDDLE;
